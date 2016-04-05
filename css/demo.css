@@ -50,15 +50,15 @@ html {
 /* Main styles */
 body {
 	font-family: "Avenir", 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
-	color: #CECECE;
-	background: #222125;
+	color: #cccccc;
+	background: #222222;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
 	text-decoration: none;
-	color: #5C5EDC;
+	color: #FFCC00;
 	outline: none;
 }
 
@@ -100,7 +100,7 @@ a:hover {
 	width: 100%;
 	font-weight: 700;
 	font-size: 0.85em;
-	color: #5C5EDC;
+	color: #FFCC00;
 	position: relative;
 	z-index: 100;
 	display: block;
@@ -135,7 +135,7 @@ a:hover {
 	letter-spacing: 0;
 	text-transform: none;
 	color: #fff;
-	background: #5C5EDC;
+	background: #FFCC00;
 }
 
 #site-info {
@@ -176,7 +176,7 @@ a:hover {
 }
 
 .bp-header nav a:hover {
-	background: #5C5EDC;
+	background: #FFCC00;
 }
 
 .bp-icon:after {
@@ -186,7 +186,7 @@ a:hover {
 	font-variant: normal;
 	text-align: center;
 	text-transform: none;
-	color: #5C5EDC;
+	color: #FFCC00;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 }
@@ -431,7 +431,7 @@ a.centerbutton {
 	text-indent: 0;
 	letter-spacing: 0;
 	color: #fff;
-	background: #5C5EDC;
+	background: #FFCC00;
 	display: none;
 }
 

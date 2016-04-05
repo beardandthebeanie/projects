@@ -6,8 +6,9 @@ var gulp            = require('gulp'),
     concat          = require('gulp-concat');
     cache           = require('gulp-cache'),
     gutil           = require("gulp-util"),
-    browserSync     = require('browser-sync'),
     ghPages         = require('gulp-gh-pages');
+    shell           = require('gulp-shell');
+    browserSync     = require('browser-sync');
 
 
 // -------------------------------------------------------------
@@ -38,10 +39,34 @@ var prod = {
 // Deploy
 var deploy = {
     path: basePath.prod + '**/*.*',
-    branch: "gh-pages"
+    branch: "gh-pages",
+    remoteUrl: "https://github.com/beardandthebeanie/projects.git"
 };
 
 
+// Task for building blog when something changed:
+// gulp.task('build', shell.task(['jekyll build --watch']));
+// Or if you don't use bundle:
+ gulp.task('build', shell.task(['jekyll build --watch']));
+
+// Task for serving blog with Browsersync
+gulp.task('serve', function () {
+    browserSync.init({server: {baseDir: basePath.prod}});
+    // Reloads page when some of the already built files changed:
+    gulp.watch('_site/**/*.*').on('change', browserSync.reload);
+});
+
+gulp.task('default', ['build', 'serve']);
+
+
+gulp.task('browser-sync', function() {
+    browserSync({
+        files: "css/*.css",
+        server: {
+            baseDir: "_site/" // Change this to your web root dir
+        }
+    });
+});
 
 // -------------------------------------------------------------
 // # Jekyll task - run `gulp jekyll`
@@ -60,8 +85,12 @@ gulp.task('jekyll', function (gulpCallBack){
 // # Deploy task - run `gulp deploy`
 // -------------------------------------------------------------
 
+
 gulp.task('deploy', function () {
     return gulp.src(deploy.path)
-        .pipe(ghPages(deploy.branch));
+    .pipe(ghPages({
+          branch: "gh-pages",
+          remoteUrl: "https://github.com/beardandthebeanie/projects.git"
+    }));
     gulp.src(deploy.path)
 });

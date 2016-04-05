@@ -8,11 +8,13 @@
   "author": "sergimiral",
   "devDependencies": {
     "browser-sync": "^2.11.2",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-cache": "*",
     "gulp-concat": "*",
     "gulp-gh-pages": "^0.5.3",
+    "gulp-shell": "^0.5.2",
     "gulp-util": "^3.0.6",
+    "lodash": "^4.8.2",
     "run-sequence": "*"
   },
   "dependencies": {
