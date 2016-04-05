@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appolo</title>
+  <meta name="author" content="Sergi Miral" />
+  <meta name="description" content="Responsive Jekyll Themes for Apps Portfolio" >
+  <meta name="keywords" content="mac,apple,iphone,ios,osx,games,apps,development" >
+  <link rel="alternate" type="application/rss+xml" title="Beard&TheBeanie" href="http://www.beardandthebeanie.com/projects//feed.xml" />
+  <link rel="stylesheet" href="/projects//css/component.css">
+  <link rel="stylesheet" href="/projects//css/demo.css">
+  <link rel="canonical" href="http://www.beardandthebeanie.com/projects//appolo">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/projects//fonts/feather/style.css">
+  <link rel="stylesheet" type="text/css"  href="/projects//css/animate.min.css">
+  <script src="/projects//js/modernizr.custom.js"></script>
+  <script src="/projects//js/hammer.min.js"></script>
+  
+  <meta property="og:site_name" content="Beard&TheBeanie"/>
+  <meta property="og:title" content="Appolo"/>
+  <meta property="og:description" content="Showcase your apps. With style." />
+  
+  
+  
+
+  <meta property="og:image" content="http://www.beardandthebeanie.com/projects//images/appolo/fb.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.beardandthebeanie.com/appolo" >
+  
+
+</head>
+
+
+  <body>
+      <div class="container">
+          <header class="bp-header cf">
+	
+</header>
+
+
+          <section class="content content--open">
+	<div class="content__item content__item--current content__item--reset">
+		<div class="content__item-inner">
+			
+			
+			<img class="content__item-img animated bounceInDown" src="/projects//images/appolo/icon.png" alt="Appolo" id="app-icon" />
+			<h2>Appolo</h2>
+			<h3>Showcase your apps. With style.</h3>
+
+            <p><img class="content__item-img-center animated zoomIn" src="/projects//images/appolo/appolo-on-devices.png" alt="Appolo for Jekyll" /></p>
+
+<p class="content__item-center">
+Introducing Appolo, a set of plugins and themes for <a href="http://jekyllrb.com">Jekyll</a> to create a static portfolio website for app developers to showcase their work. Its minimalistic theme and playful animations make it perfect to display the amazing apps you have made. The responsive design looks perfect in desktop or mobile. It also comes with a set of plugins to remove the hassle of formatting your apps’ pages. The theme is based on a <a href="http://tympanus.net/codrops/2015/07/06/zoom-slider/">Zoom Slider demo</a> in <a href="http://tympanus.net/codrops">Codrops</a>.
+</p>
+
+<h3 id="section_title">Adding A New App</h3>
+
+<p>To add a new app, simply create a markdown file in <code class="highlighter-rouge">_posts</code> directory or just duplicate the markdown file for this page in <code class="highlighter-rouge">_posts/2015-12-26-appolo.markdown</code>. Set the variables in the YAML Front Matter block with your app’s parameters.</p>
+
+<table><tr><td class="colored">layout
+</td><td>Always use <code class="highlighter-rouge">post</code>.
+</td></tr><tr><td class="colored">title
+</td><td><code class="highlighter-rouge">title</code> appears on the top of the app’s page.
+</td></tr><tr><td class="colored">subtitle
+</td><td><code class="highlighter-rouge">subtitle</code> appears after the <code class="highlighter-rouge">title</code> in the app’s page.
+</td></tr><tr><td class="colored">description
+</td><td>Used in the head’s meta.
+</td></tr><tr><td class="colored">date
+</td><td>Published date.
+</td></tr><tr><td class="colored">categories
+</td><td>Not used currently.
+</td></tr><tr><td class="colored">permalink
+</td><td>NEEDED. This sets the app’s URL to baseurl/permalink.
+</td></tr><tr><td class="colored">device
+</td><td>Type of device to use for this app in the landing page. Available options: imac, macbook, iphone, ipad, and apple-watch.
+</td></tr><tr><td class="colored">name
+</td><td>Name of the app that is shown on the landing page.
+</td></tr><tr><td class="colored">tagline
+</td><td>Shown under <code class="highlighter-rouge">name</code> on the landing page.
+</td></tr></table>
+
+<h3 id="section_title">Writing an App Page</h3>
+
+<p>Appolo comes with some custom <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> tags to make it easy writing an app page.</p>
+
+<table><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">section_title</span><span class="w"> </span><span class="err">Section</span><span class="w"> </span><span class="err">Title</span><span class="w"> </span><span class="err">Here</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use this tag to render a section title.
+</td></tr><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">img</span><span class="w"> </span><span class="err">alignment</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">relative_path_to_image</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">alt</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use <code class="highlighter-rouge">img</code> tag to render an image with an assigned <code class="highlighter-rouge">alignment</code>. You can use one of the four alignments: <code class="highlighter-rouge">center</code>, <code class="highlighter-rouge">right</code>, <code class="highlighter-rouge">left</code>, or <code class="highlighter-rouge">fill-width</code>.
+</td></tr><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">textalign</span><span class="w"> </span><span class="err">center</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use <code class="highlighter-rouge">textalign</code> block to set the paragraph alignment.
+</td></tr><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">youtube</span><span class="w"> </span><span class="err">youtube_id</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use <code class="highlighter-rouge">youtube</code> followed by the id of the video to show a responsive YouTube frame.
+</td></tr><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">features</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use <code class="highlighter-rouge">features</code> block to list the features of your apps.
+</td></tr><tr><td class="colored"><code class="highlighter-rouge"><span class="p">{</span><span class="w"> </span><span class="err">%</span><span class="w"> </span><span class="err">download</span><span class="w"> </span><span class="err">type</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">url</span><span class="w"> </span><span class="err">%</span><span class="p">}</span></code>
+</td><td>Use <code class="highlighter-rouge">download</code> tag to render a button to download your app. Available options for <code class="highlighter-rouge">type</code> are <code class="highlighter-rouge">app_store</code>, <code class="highlighter-rouge">play_store</code>, <code class="highlighter-rouge">direct</code>, and <code class="highlighter-rouge">coming_soon</code>.
+</td></tr></table>
+
+<h3 id="section_title">App's Images</h3>
+
+<p>When adding a new app, there are some images you need to prepare. You need to put these images in <code class="highlighter-rouge">images/app_name</code> folder.</p>
+
+<table><tr><td class="colored">preview.png
+</td><td>321 x 193 px
+</td><td>This preview image is used on the landing page. It is positioned inside the device you chose for the app.
+</td></tr><tr><td class="colored">icon.png
+</td><td>512 x 512 px
+</td><td>Icon of the app.
+</td></tr><tr><td class="colored">fb.png
+</td><td>1200 x 630 px
+</td><td>The image for Facebook Open Graph.
+</td></tr></table>
+
+
+			<div class="footer">
+				<p>© 2014-2016 Edit this copyright in _includes/copyright.md</p>
+
+			</div>
+		</div>
+	</div>
+
+	<button class="button button--close"><i class="icon icon--circle-cross"></i><span class="text-hidden">Close content</span></button>
+</section>
+
+
+
+      </div>
+
+      <section class="content">
+      </section>
+
+      
+
+
+
+
+    <script src="/projects//js/classie.js"></script>
+  	<script src="/projects//js/dynamics.min.js"></script>
+  	<script src="/projects//js/main.js"></script>
+  </body>
+
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "appolo-gulp-deploy-to-gh-pages-test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {},
+  "repository": {},
+  "author": "sergimiral",
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.0",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-gh-pages": "^0.5.3",
+    "gulp-util": "^3.0.6",
+    "run-sequence": "*"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
+  }
+}
